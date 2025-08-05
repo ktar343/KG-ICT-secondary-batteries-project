@@ -1,0 +1,14 @@
+% 중첩 제어문을 위한 스크립트
+
+B=input("모든 원소가 자연수인 벡터를 입력하세요:");
+
+for k = 1: length(B)
+    if rem( B(k), 2) ==0
+        x=B(k);
+        while x>=1
+            fprintf("a");
+            x=x-1;
+        end
+        fprintf("\n");
+    end
+end
