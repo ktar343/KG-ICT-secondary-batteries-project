@@ -1,0 +1,75 @@
+[데이터]
+
+>> x = linspace(-pi/2, pi/2, 20);
+>>  y = 12./ (1-4.*cos(x) );
+>> plot(x, y)
+>> 
+>> 
+>> x = linspace(-pi/2, pi/2, 20);
+>>  y = 12./ (1-4.*cos(x) );
+>> plot(x, y, 'd k -.')
+>> 
+>> plot(x, y, 'color', 'r')
+
+>> 
+>> plot(x, y, 'linestyle', ':', 'linewidth', 2)
+>> % 파랑 점선 굵은 형
+>> 
+>>  plot(x, y, 'marker', 'o', 'markersize', 10, 'markeredgecolor', 'r', 'markerfacecolor', 'b')
+
+>> %점선 그리고 파란색 dot
+>> 
+>> x = linspace(0, 10, 200);
+>> y = sin(3.*x) .*exp(-x);
+>> plot(x, y, 'linewidth',2)
+>> xlabel('Distance [m]')
+>> ylabel ("Intensity")
+>> % 굵은 형태 그리고 파란색 선의 진동감쇠 형태의 그래프
+>> 
+>> plot(x, y, 'linewidth',2)
+>> xlabel('Distance [m]')
+>> ylabel("Intensity")
+>> title("Signal Intensity by Distance")
+
+>> 
+
+
+
+----------------------------------------------------
+예제 10-11 파동함수 형태
+
+>> 
+>> x = linspace(-3.*pi,3.*pi);
+>> y = sin(x);
+>> plot(x,y, 'linewidth', 3)
+>> xlabel('\theta [degree]')
+>> ylabel("sin(\theta)")
+>> 
+
+
+----------------------------------------------------------
+예제 10-12 로그함수 형태
+
+>>  x = linspace(-1,1,50);
+>> y = -3*exp(-2*x);
+>> plot(x, y, 'linewidth',2)
+>> title('y_{exp}(x)=-3exp^{-2x}')
+
+>> `
+
+-----------------------------------------------------------
+예제 10-15
+>> x = linspace(-5,5);
+>> y = 2.*x.*sin(x).^2;
+>> plot(x, y, 'linewidth',2)
+>> axis tight
+>> minMax = [min(x), max(x), min(y), max(y)]
+
+
+minMax =
+
+   -5.0000    5.0000   -9.5258    9.5258
+
+>> 
+
+
