@@ -107,3 +107,86 @@ B =
 >>  writematrix(B, "magicexcel.xlsx", 'sheet', 'data2')
 
 >> 
+
+
+
+--------------
+
+
+>> type magic.txt
+
+17	24	1	8	15
+23	5	7	14	16
+4	6	13	20	22
+10	12	19	21	3
+11	18	25	2	9
+8,1,6
+3,5,7
+4,9,2
+>> A = readmatrix("magic.txt")
+
+A =
+
+    17    24     1     8    15
+    23     5     7    14    16
+     4     6    13    20    22
+    10    12    19    21     3
+    11    18    25     2     9
+   NaN   NaN   NaN   NaN   NaN
+   NaN   NaN   NaN   NaN   NaN
+   NaN   NaN   NaN   NaN   NaN
+
+>> B = readmatrix("magic.txt", 'range','B2:D5')
+
+B =
+
+     5     7    14
+     6    13    20
+    12    19    21
+    18    25     2
+
+>> C = readmatrix("magic.txt", 'range',3)
+
+C =
+
+     4     6    13    20    22
+    10    12    19    21     3
+    11    18    25     2     9
+   NaN   NaN   NaN   NaN   NaN
+   NaN   NaN   NaN   NaN   NaN
+   NaN   NaN   NaN   NaN   NaN
+
+>> D = readmatrix("magic.txt", 'range',[3 3])
+
+D =
+
+    13    20    22
+    19    21     3
+    25     2     9
+   NaN   NaN   NaN
+   NaN   NaN   NaN
+   NaN   NaN   NaN
+
+>> E = readmatrix("magic.txt", 'range','2:4')
+
+E =
+
+    23     5     7    14    16
+     4     6    13    20    22
+    10    12    19    21     3
+
+>>  F = readmatrix("magic.txt", 'range','C:E')
+
+
+F =
+
+     1     8    15
+     7    14    16
+    13    20    22
+    19    21     3
+    25     2     9
+   NaN   NaN   NaN
+   NaN   NaN   NaN
+   NaN   NaN   NaN
+
+>> 
