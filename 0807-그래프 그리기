@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Aug  7 16:33:44 2025
+
+@author: ktar343
+"""
+import matplotlib.pyplot as plt
+import random
+import numpy as np
+
+rn = np.random.permutation(100)
+
+
+rn = random.sample( range(100), 100 ) #0~99까지의 수를 랜덤하게 섞어줌(중복 x)
+print ( f'* rn * \n {rn}')
+
+plt.plot( rn, marker='o' , linestyle='-' )
+
+plt.xlabel( xlabel='Index' )
+plt.ylabel( ylabel='Value' )
+plt.title( label='TITLE' )
+
+A = [1, 2, 3, 4, 2, 6, 4, 8, 9, 0 ]
+B= [0]*10
+for k in range( 9+1 ) :
+    B[ A[k] ] = 1
+    
+A = [1, 2, 3, 4, 2, 6, 4, 8, 9, 0 ]
+B= [0]*10
+for k in range( 9+1 ) :
+    B[ A[k] ] += 1
+   
+    
+print( B )
+plt.plot( B )
+
+    
+    
